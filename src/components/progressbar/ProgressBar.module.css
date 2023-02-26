@@ -1,0 +1,104 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.progress_bar {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 0 60px;
+  border: 1px solid #e0e0e0;
+}
+
+.progress_bar .steps {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+.progress_bar .steps .progress_state {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.steps .progress_state .icons {
+  height: 100px;
+}
+.steps .progress_state .icons .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 15px;
+  color: #9e9b9b;
+  font-size: 33px;
+  font-weight: 500;
+  border-radius: 50%;
+  background: #fff;
+  border: 6px solid #e0e0e0;
+  transition: all 200ms ease;
+  transition-delay: 0s;
+}
+.steps .progress_state .icons .small_circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  margin-top: 15px;
+  padding: 5px;
+  color: #ffff;
+  font-size: 30px;
+  font-weight: 500;
+  border-radius: 50%;
+  background: #d5a222;
+  border: 5px solid #d5a222;
+  transition: all 200ms ease;
+  transition-delay: 0s;
+}
+
+.steps .progress_state .states_errors {
+  height: 80px;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+.steps .progress_state .states_errors p {
+  margin: 0;
+}
+.steps .progress_state .states_errors .status_api {
+ 
+}
+
+.steps .progress {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  right: 42px;
+  top: 25%;
+  height: 8px;
+  width: 93%;
+  background: #e0e0e0;
+  z-index: -1;
+}
+
+.steps .progress span {
+  position: absolute;
+  height: 100%;
+  width: 71%;
+  background: #d5a222;
+  transition: all 300ms ease;
+}
+
+

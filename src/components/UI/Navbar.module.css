@@ -1,0 +1,109 @@
+button {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+.font {
+  font-family: "Cairo", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.navbar_ul {
+  margin: 0;
+  padding: 0;
+}
+
+ li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 40px;
+}
+
+nav {
+  background-color: #ffff;
+  box-sizing: border-box;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 16px 70px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+.navbar {
+  display: none;
+}
+.navbar_mobile {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #cccccc;
+  position: fixed;
+  padding: 1rem;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s ease-in;
+  transform: translateY(100px);
+}
+
+.navbar_mobile__arabic ul {
+  flex-direction: column;
+}
+.navbar_mobile ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  padding: 0;
+}
+.navbar_mobile ul li {
+  margin-top: 20px;
+}
+
+nav img {
+  width: 140px;
+  height: 100px;
+}
+nav .hamburger_menu {
+  width: 35px;
+  height: 35px;
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #4f5665;
+  transition: all 0.3s ease-in-out;
+}
+ul li a:visited {
+  color: rgb(0, 0, 0);
+}
+ul li a:hover {
+  color: #f92626;
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    align-items: center;
+  }
+  .navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .navbar ul {
+    display: flex;
+  }
+
+  
+}
