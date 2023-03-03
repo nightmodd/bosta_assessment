@@ -1,22 +1,23 @@
 import React from "react";
 import styles from "./AddressAndHelp.module.css";
+import { useTranslation } from "react-i18next";
 import  img  from "../../assets/help.png";
 
 const AddressAndHelp = (props) => {
+
+  const { t } = useTranslation();
 return (
   <div className={styles.container}>
-    <span>عنوان التسليم</span>
+    <span>{t("addressTitle")}</span>
     <div className={styles.address}>
-      <p>
-        امبابة شارع طلعت حرب مدينة العمال بجوار البرنس منزل 17 بلوك 33, Cairo
-      </p>
+      <p>{t("address")}</p>
     </div>
     <div className={styles.help_section}>
+      <img src={img} alt="help" />
       <div className={styles.complain_container}>
-        <span>هل يوجد مشكله في شحنتك؟</span>
-        <button>ابلاغ عن مشكلة</button>
+        <span>{t("anyBug")}</span>
+        <button>{t("buttonBug")}</button>
       </div>
-      <img src={img} alt="help image" />
     </div>
   </div>
 );  

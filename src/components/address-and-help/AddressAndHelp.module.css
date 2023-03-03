@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 450px;
+  margin-top: 40px;
+}
+
+.container span {
+
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.container .address {
+  margin-top: 20px;
+  padding: 20px;
+
+  font-family: Cairo, sans-serif;
+
+
+  background-color: rgb(232 234 238 / 0.529);
+  border: 3px solid rgb(219 210 210 / 0.667);
+  border-radius: 20px;
+}
+
+.container .help_section {
+  display: flex;
+  gap: 20px;
+
+
+  box-sizing: border-box;
+  width: 450px;
+  margin-top: 20px;
+  padding: 20px;
+
+  border: 3px solid rgb(219 210 210 / 0.667);
+  border-radius: 20px;
+}
+
+.container .help_section .complain_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  justify-content: center;
+}
+
+.help_section .complain_container button {
+  padding: 0.5rem 3.4375rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+
+  background-color: rgb(232 48 48);
+  border-radius: 0.5rem;
+}
+
+.container .help_section img {
+  width: 7.5rem;
+  height: 6.25rem;
+}

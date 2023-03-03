@@ -3,15 +3,13 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  margin: 0 30px;
+  gap: 4.375rem;
 }
+
 @media screen and (max-width: 1400px) {
   .container {
     flex-direction: column;
-    flex-direction: column-reverse;
     align-items: center;
-   
-    gap: 10px;
+    gap: 0.625rem;
   }
 }

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  max-width: 850px;
+  margin-top: 40px;
+}
+
+.container span {
+  margin-right: 5px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+table {
+  width: 800px;
+  margin: 1.25rem 0;
+
+  justify-content: flex-start;
+  text-align: start;
+  font-size: 17px;
+
+  border: 2px solid rgb(219 210 210 / 0.667);
+}
+
+th,
+td {
+  padding: 1em;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border-bottom: 0.2px solid rgb(182 182 182 / 0.667);
+}
+
+tr th {
+  text-align: inherit;
+  color: rgb(51 35 110);
+  background: rgb(232 234 238 / 0.529);
+}
+
+@media screen and (max-width: 800px) {
+  table {
+    width: 100%;
+  }
+}
+  

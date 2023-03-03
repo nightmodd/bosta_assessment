@@ -1,27 +1,42 @@
 import React, { useState, useEffect } from "react";
+import i18next from "i18next";
+import { useTranslation } from "react-i18next";
 import styles from "./ProgressBar.module.css";
 
+const steps = [
+  {
+    title: "",
+    icon: "",
+    reachedIcon: "", //small icon
+    description: "",
+    reached: false,
+  },
+];
+
 const ProgressBar = (props) => {
+  const { t } = useTranslation();
+
   const [deliverState, setDeliverState] = useState({
-    progresbarWidth: "71%",
+    progressBarWidth: "69%",
     errorMessage: "",
   });
+  console.log(props.orderState);
 
   useEffect(() => {
-    if (props.fillColor === "#6bd110") {
-      setDeliverState({ progresbarWidth: "100%", errorMessage: "" });
-    } else if (props.fillColor === "#cf0303") {
+    if (props.orderState === "DELIVERED") {
+      setDeliverState({ progressBarWidth: "100%", errorMessage: "" });
+    } else if (props.orderState === "DELIVERED_TO_SENDER") {
       setDeliverState({
-        progresbarWidth: "71%",
-        errorMessage: "تم ارجاع الشحنة للتاجر",
+        progressBarWidth: "69%",
+        errorMessage: t("erorrMessageCancelled"),
       });
-    } else {
+    } else  {
       setDeliverState({
-        progresbarWidth: "71%",
-        errorMessage: "العميل غير متواجد في العنوان",
+        progressBarWidth: "69%",
+        errorMessage: t("erorrMessageDelay"),
       });
     }
-  }, [props.fillColor]);
+  }, [i18next.language]);
 
   return (
     <>
@@ -42,7 +57,7 @@ const ProgressBar = (props) => {
               </div>
 
               <div className={styles.states_errors}>
-                <p className={styles.status}>تم انشاء الشحنة</p>
+                <p className={styles.status}>{t("firstStepProgressBar")}</p>
               </div>
             </div>
 
@@ -59,7 +74,7 @@ const ProgressBar = (props) => {
                 </span>
               </div>
               <div className={styles.states_errors}>
-                <p className={styles.status}>تم استلام الشحنة من التاجر</p>
+                <p className={styles.status}>{t("secondStepProgressBar")}</p>
               </div>
             </div>
 
@@ -68,7 +83,7 @@ const ProgressBar = (props) => {
                 <span
                   className={styles.circle}
                   style={
-                    props.fillColor === "#6bd110"
+                    props.orderState === "DELIVERED"
                       ? { display: "none" }
                       : {
                           borderColor: props.fillColor,
@@ -82,7 +97,7 @@ const ProgressBar = (props) => {
                 <span
                   className={styles.small_circle}
                   style={
-                    props.fillColor === "#6bd110"
+                    props.orderState === "DELIVERED"
                       ? {
                           display: "flex",
                           backgroundColor: "#6bd110",
@@ -95,7 +110,7 @@ const ProgressBar = (props) => {
                 </span>
               </div>
               <div className={styles.states_errors}>
-                <p className={styles.status}>الشحنه خرجت للتسليم</p>
+                <p className={styles.status}>{t("thirdStepProgressBar")}</p>
                 <span
                   className={styles.status_api}
                   style={{
@@ -112,7 +127,7 @@ const ProgressBar = (props) => {
                 <span
                   className={styles.circle}
                   style={
-                    props.fillColor === "#6bd110"
+                    props.orderState === "DELIVERED"
                       ? {
                           display: "none",
                         }
@@ -124,7 +139,7 @@ const ProgressBar = (props) => {
                 <span
                   className={styles.small_circle}
                   style={
-                    props.fillColor === "#6bd110"
+                    props.orderState === "DELIVERED"
                       ? {
                           display: "flex",
                           backgroundColor: "#6bd110",
@@ -137,16 +152,22 @@ const ProgressBar = (props) => {
                 </span>
               </div>
               <div className={styles.states_errors}>
-                <p className={styles.status}>تم التسليم</p>
+                <p className={styles.status}>{t("fourthStepProgressBar")}</p>
               </div>
             </div>
 
-            <div className={styles.progress}>
+            <div className={styles.progress}
+              style={
+                i18next.language === "ar" ? 
+                  {} : {
+                    marginRight: "0",
+                    marginLeft: "2.5rem",
+            } }>
               <span
                 className={styles.indicator}
                 style={{
                   backgroundColor: props.fillColor,
-                  width: deliverState.progresbarWidth,
+                  width: deliverState.progressBarWidth,
                 }}
               ></span>
             </div>

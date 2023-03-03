@@ -1,0 +1,39 @@
+{
+  "firstNavHeader": "الرئيسيه",
+  "secondNavHeader": "الأسعار",
+  "thirdNavHeader": "كلم المبيعات",
+  "fourthNavHeader": "تتبع شحنتك",
+  "fifthNavHeader": "تسجيل الدخول",
+  "navBarButton": "ENG",
+
+  "trackingNumber": "رقم الشحنة",
+  "lastUpdated": "اخر تحديث",
+  "seller": "البائع",
+  "deliveryDate": " موعد التسليم خلال",
+
+  "statusDelivered": "تم التوصيل",
+  "statusSender": "تم الغاء الشحنه",
+  "statusOther": "لم يتم تسليم الشحنة",
+
+  "firstStepProgressBar": "تم انشاء الشحنة",
+  "secondStepProgressBar": "تم استلام الشحنة من التاجر",
+  "thirdStepProgressBar": "الشحنه خرجت للتسليم",
+  "fourthStepProgressBar": "تم التسليم",
+
+  "statusTableTitle": "تفاصيل الشحنة",
+
+  "erorrMessageDelay": "العميل غير متواجد في العنوان",
+  "erorrMessageCancelled": "تم ارجاع الشحنة للتاجر",
+
+
+  "tableHeader1": "الفرع",
+  "tableHeader2": "التاريخ",
+  "tableHeader3": "الوقت",
+  "tableHeader4": "تفاصيل",
+
+  "addressTitle": "عنوان التسليم",
+  "address" :" امبابة شارع طلعت حرب مدينة العمال بجوار البرنس منزل 17 بلوك 33, Cairo",
+  "anyBug":"هل يوجد مشكله في شحنتك؟",
+  "buttonBug":"ابلاغ عن مشكلة"
+}
+	
