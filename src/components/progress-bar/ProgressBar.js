@@ -19,15 +19,21 @@ const ProgressBar = (props) => {
     } else if (props.orderState === "DELIVERED_TO_SENDER") {
       setDeliverState({
         progressBarWidth: "69%",
-        errorMessage: t("errorMessageCancelled"),
+        errorMessage:
+          i18next.language === "ar"
+            ? "تم ارجاع الشحنة للتاجر"
+            : "Package is cancelled",
       });
     } else  {
       setDeliverState({
         progressBarWidth: "69%",
-        errorMessage: t("errorMessageDelay"),
+        errorMessage:
+          i18next.language === "ar"
+            ? "العميل غير متواجد في العنوان"
+            : "Customer is not at home",
       });
     }
-  }, [i18next.language]);
+  }, [props.orderState , i18next.language]);
 
   return (
     <>

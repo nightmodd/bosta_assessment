@@ -24,7 +24,7 @@ function App() {
   const [shipmentData, setShipmentData] = useState(null);
   const { i18n } = useTranslation();
 
-  const URL = "https://tracking.bosta.co/shipments/track/9442984";
+  const URL = "https://tracking.bosta.co/shipments/track/7234258";
 
   const getData = async () => {
     const response = await fetch(URL);

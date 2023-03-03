@@ -22,8 +22,7 @@
 
   "statusTableTitle": "Package Status",
 
-  "errorMessageDelay": "Customer is not at home",
-  "errorMessageCancelled": "Package is cancelled",
+
 
   "tableHeader1": "Hub Branch",
   "tableHeader2": "Date",
