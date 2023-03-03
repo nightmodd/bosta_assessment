@@ -1,0 +1,37 @@
+{
+  "firstNavHeader": "Integrations",
+  "secondNavHeader": "Pricing",
+  "thirdNavHeader": "Products",
+  "fourthNavHeader": "TrackShipment",
+  "fifthNavHeader": "Sign In",
+  "navBarButton": "AR",
+  
+  "trackingNumber": "Tracking Number",
+  "lastUpdated": "Last Updated",
+  "seller": "Seller",
+  "deliveryDate": "ُExpected Delivery Date",
+
+  "statusDelivered": "Delivered",
+  "statusSender": "Delivered to sender",
+  "statusOther": "Cancelled",
+
+  "firstStepProgressBar": "Package Created",
+  "secondStepProgressBar": "Package Received by Carrier",
+  "thirdStepProgressBar": "Package on the way",
+  "fourthStepProgressBar": "Package Delivered",
+
+  "statusTableTitle": "Package Status",
+
+  "erorrMessageDelay": "Customer is not at home",
+  "erorrMessageCancelled": "Package is cancelled",
+
+  "tableHeader1": "Hub Branch",
+  "tableHeader2": "Date",
+  "tableHeader3": "Time",
+  "tableHeader4": "Details",
+
+  "addressTitle": "Address",
+  "address": "20 Ibrahim baher zghlol ,El Manyal, Cairo, Egypt",
+  "anyBug": " Is there any problem with your package? ",
+  "buttonBug": "Report a problem"
+}
