@@ -3,15 +3,7 @@ import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import styles from "./ProgressBar.module.css";
 
-const steps = [
-  {
-    title: "",
-    icon: "",
-    reachedIcon: "", //small icon
-    description: "",
-    reached: false,
-  },
-];
+
 
 const ProgressBar = (props) => {
   const { t } = useTranslation();
@@ -20,20 +12,19 @@ const ProgressBar = (props) => {
     progressBarWidth: "69%",
     errorMessage: "",
   });
-  console.log(props.orderState);
-
+ 
   useEffect(() => {
     if (props.orderState === "DELIVERED") {
       setDeliverState({ progressBarWidth: "100%", errorMessage: "" });
     } else if (props.orderState === "DELIVERED_TO_SENDER") {
       setDeliverState({
         progressBarWidth: "69%",
-        errorMessage: t("erorrMessageCancelled"),
+        errorMessage: t("errorMessageCancelled"),
       });
     } else  {
       setDeliverState({
         progressBarWidth: "69%",
-        errorMessage: t("erorrMessageDelay"),
+        errorMessage: t("errorMessageDelay"),
       });
     }
   }, [i18next.language]);

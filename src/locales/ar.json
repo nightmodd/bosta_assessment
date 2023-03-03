@@ -22,8 +22,8 @@
 
   "statusTableTitle": "تفاصيل الشحنة",
 
-  "erorrMessageDelay": "العميل غير متواجد في العنوان",
-  "erorrMessageCancelled": "تم ارجاع الشحنة للتاجر",
+  "errorMessageDelay": "العميل غير متواجد في العنوان",
+  "errorMessageCancelled": "تم ارجاع الشحنة للتاجر",
 
 
   "tableHeader1": "الفرع",
